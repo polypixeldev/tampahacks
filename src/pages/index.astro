@@ -28,7 +28,7 @@ import { YouTube } from "@astro-community/astro-embed-youtube";
     <title>TampaHacks</title>
   </head>
   <body
-    class="flex min-h-screen flex-col items-center justify-start bg-gradient-to-b from-black to-gray-600 px-10 py-20"
+    class="flex min-h-screen flex-col items-center justify-start bg-gradient-to-b from-black to-gray-700 px-10 py-20"
   >
     <img
       src="/logo.png"
@@ -115,6 +115,25 @@ import { YouTube } from "@astro-community/astro-embed-youtube";
         <YouTube id="https://www.youtube.com/watch?v=zK4T80bTeVM" />
       </div>
     </section>
+
+    <footer
+      class="my-5 flex flex-col items-center justify-start px-10 text-center text-xl text-white"
+    >
+      <p class="w-full md:w-2/3">
+        this website is open source! <a
+          href="https://github.com/polypixeldev/tampahacks"
+          class="underline">check it out on github</a
+        >
+      </p>
+      <p class="w-full md:w-2/3">
+        you can also see all of our finances on <a
+          href="https://hcb.hackclub.com/tampahacks"
+          class="underline">HCB</a
+        > - TampaHacks is fiscally sponsored by The Hack Foundation (d.b.a. Hack
+        Club), a 501(c)(3) nonprofit (EIN: 81-2908499). any donations you make to
+        TampaHacks are tax deductible.
+      </p>
+    </footer>
 
     <script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"
     ></script>
