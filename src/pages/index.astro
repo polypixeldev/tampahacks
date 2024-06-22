@@ -4,7 +4,7 @@ import "@fontsource/space-grotesk";
 import { YouTube } from "@astro-community/astro-embed-youtube";
 ---
 
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/png" href="/logo.png" />
@@ -59,26 +59,11 @@ import { YouTube } from "@astro-community/astro-embed-youtube";
         Sign Up
       </a>
       <a
-        id="read-more"
         class="block px-5 py-3 text-center text-2xl font-bold text-white"
         href="#questions"
       >
         Read More
       </a>
-      <script>
-        const readMoreElement = document.getElementById('read-more');
-        if (readMoreElement !== null) {
-          readMoreElement.addEventListener('click', (event) => {
-            event.preventDefault();
-            const questionLandElement = document.getElementById("questions");
-            if (questionLandElement !== null) {
-              questionLandElement.scrollIntoView({ 
-                behavior: 'smooth' 
-              });
-            }
-          });
-        }
-      </script>
     </div>
     <section
       id="questions"
