@@ -1,0 +1,103 @@
+---
+import "@fontsource/space-mono";
+import "@fontsource/space-grotesk";
+import { YouTube } from "@astro-community/astro-embed-youtube";
+
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  ogTitle="TampaHacks - a high school game jam this August"
+  ogDesc="A high school game jam where teens can get together and make games for fun!"
+>
+  <p class="text-center text-2xl text-white">
+    A high school <strong>game jam</strong> where teens can get together and make
+    games for fun!
+  </p>
+  <hr class="my-5 w-5/6 border-white" />
+  <p class="text-center text-3xl font-bold text-white">
+    Saturday, August 17th &nbsp;•&nbsp; 9AM-8PM &nbsp;•&nbsp; <a
+      href="https://maps.app.goo.gl/QawPhC5xhL8URuzs5"
+      class="underline">AMRoC Fab Lab</a
+    > &nbsp;•&nbsp; <span class="text-green-600">Free</span>
+  </p>
+  <div
+    class="my-5 flex flex-col items-center justify-center gap-x-10 md:flex-row"
+  >
+    <a
+      class="block rounded-md border-2 border-sky-800 bg-sky-500 px-5 py-3 text-center text-2xl font-bold text-white"
+      href="https://lu.ma/event/evt-1p9pAPlGZojlJUR"
+      data-luma-action="checkout"
+      data-luma-event-id="evt-1p9pAPlGZojlJUR"
+    >
+      Sign Up
+    </a>
+    <a
+      class="block px-5 py-3 text-center text-2xl font-bold text-white"
+      href="#questions"
+    >
+      Read More
+    </a>
+  </div>
+  <section
+    id="questions"
+    class="flex flex-col items-center justify-start gap-10"
+  >
+    <h2 class="-rotate-3 text-center font-mono text-6xl font-bold text-white">
+      question land
+    </h2>
+    <div
+      class="w-full rounded-lg border-4 border-blue-900 bg-blue-700 px-10 py-5 md:w-2/3"
+    >
+      <p class="pb-3 text-3xl font-bold text-white">what&apos;s a game jam?</p>
+      <p class="text-2xl text-white">
+        <strong>a game jam is a social speedrun to make a game!</strong> At TampaHacks,
+        you&apos;ll have the opportunity to get together with other teenagers to
+        code games for fun, no matter how goofy or janky.
+      </p>
+    </div>
+    <div
+      class="w-full rounded-lg border-4 border-green-800 bg-green-600 px-10 py-5 md:w-2/3"
+    >
+      <p class="pb-3 text-3xl font-bold text-white">do I need experience?</p>
+      <p class="text-2xl text-white">
+        <strong
+          >you don&apos;t need any experience to come to TampaHacks!</strong
+        > you&apos;re able to learn everything you&apos;ll need to make a game here
+        - but if you&apos;d like to get a head start, feel free to browse around
+        on YouTube or <a
+          href="https://jams.hackclub.com/batch/sprig/part-1"
+          class="underline">start with Sprig</a
+        >!
+      </p>
+    </div>
+    <div
+      class="w-full rounded-lg border-4 border-blue-900 bg-blue-700 px-10 py-5 md:w-2/3"
+    >
+      <p class="pb-3 text-3xl font-bold text-white">
+        how do I get to the venue?
+      </p>
+      <p class="text-2xl text-white">
+        <a href="https://maps.app.goo.gl/QawPhC5xhL8URuzs5" class="underline"
+          >AMRoC Fab Lab</a
+        > is located in Tampa's University Mall, and it can be a little confusing
+        to get to it the first time due to construction. Watch the video below for
+        a guide on how to get to the venue.
+      </p>
+      <YouTube id="https://www.youtube.com/watch?v=zK4T80bTeVM" />
+    </div>
+    <div
+      class="w-full rounded-lg border-4 border-green-800 bg-green-600 px-10 py-5 md:w-2/3"
+    >
+      <p class="pb-3 text-3xl font-bold text-white">have more questions?</p>
+      <p class="text-2xl text-white">
+        you can reach out to the team with any more questions at <a
+          href="mailto:team@tampahacks.com"
+          class="underline">team@tampahacks.com</a
+        >
+      </p>
+    </div>
+  </section>
+  <script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"
+  ></script>
+</Layout>
