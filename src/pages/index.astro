@@ -18,12 +18,14 @@ import TampaHacksLogo from "../assets/tampahacks.png";
 <Layout>
   <div class="flex flex-col items-center justify-start gap-5">
     <p
-      class="my-5 flex flex-col items-center justify-start px-10 text-center text-2xl text-white"
+      class="my-5 flex flex-col items-center justify-start px-10 text-center text-xl text-white md:text-2xl"
     >
       Creating new opportunities for high school hackers in the Tampa Bay area!
     </p>
     <section class="flex w-4/5 flex-col items-center justify-start gap-5">
-      <h2 class="text-center font-mono text-5xl font-bold text-white">
+      <h2
+        class="text-center font-mono text-3xl font-bold text-white md:text-5xl"
+      >
         events
       </h2>
       <Event
@@ -42,7 +44,7 @@ import TampaHacksLogo from "../assets/tampahacks.png";
       />
     </section>
     <section class="py-20">
-      <p class="font-jersey text-center text-4xl text-white">
+      <p class="font-jersey text-center text-3xl text-white md:text-4xl">
         get notified when we have an announcement!
       </p>
       <form id="email-form" class="flex items-center justify-center pt-5">
@@ -50,14 +52,14 @@ import TampaHacksLogo from "../assets/tampahacks.png";
           id="email-input"
           name="email"
           type="email"
-          class="border-tampahacks-blue bg-tampahacks-gray border-4 px-3 py-2 text-2xl text-white"
+          class="border-tampahacks-blue bg-tampahacks-gray border-4 px-1 py-2 text-lg text-white md:px-3 md:text-2xl"
           placeholder="ben@tampahacks.com"
         />
         <button
           id="email-button"
           type="submit"
-          class="bg-tampahacks-blue border-tampahacks-blue border-4 p-2 text-2xl font-bold text-white"
-          >sign up</button
+          class="bg-tampahacks-blue border-tampahacks-blue border-4 p-2 text-lg font-bold text-white md:text-2xl"
+          >signup</button
         >
       </form>
       <script>
