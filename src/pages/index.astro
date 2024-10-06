@@ -11,6 +11,7 @@ import TampaHacks6 from "../assets/photos/tampahacks6.jpg";
 
 import Layout from "../layouts/Layout.astro";
 import Event from "../components/Event.astro";
+import Email from "../components/Email.astro";
 import CounterspellTampaLogo from "../assets/counterspell-tampa.png";
 import TampaHacksLogo from "../assets/tampahacks.png";
 ---
@@ -47,45 +48,7 @@ import TampaHacksLogo from "../assets/tampahacks.png";
       <p class="font-jersey text-center text-3xl text-white md:text-4xl">
         get notified when we have an announcement!
       </p>
-      <form id="email-form" class="flex items-center justify-center pt-5">
-        <input
-          id="email-input"
-          name="email"
-          type="email"
-          class="border-tampahacks-blue bg-tampahacks-gray border-4 px-1 py-2 text-lg text-white md:px-3 md:text-2xl"
-          placeholder="ben@tampahacks.com"
-        />
-        <button
-          id="email-button"
-          type="submit"
-          class="bg-tampahacks-blue border-tampahacks-blue border-4 p-2 text-lg font-bold text-white md:text-2xl"
-          >signup</button
-        >
-      </form>
-      <script>
-        document
-          .getElementById("email-form")
-          ?.addEventListener("submit", (event) => {
-            event.preventDefault();
-            fetch(
-              "https://services.leadconnectorhq.com/hooks/TFhJZDO3j6DhF9ljVKym/webhook-trigger/fbc82ba0-6909-46b1-8078-96306cb47bad",
-              {
-                method: "POST",
-                body: JSON.stringify({
-                  email: new FormData(
-                    document.getElementById("email-form") as HTMLFormElement,
-                  ).get("email"),
-                }),
-                headers: {
-                  "Content-Type": "application/json",
-                },
-              },
-            );
-            (document.getElementById("email-input") as HTMLInputElement).value =
-              "";
-            document.getElementById("email-button")!.innerHTML = "signed up!";
-          });
-      </script>
+      <Email />
     </section>
     <section class="m-2 w-4/5 columns-1 md:columns-2 lg:columns-3">
       <Image class="py-2" src={TampaHacks2} alt="Photo from TampaHacks" />
