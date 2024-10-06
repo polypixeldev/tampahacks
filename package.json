@@ -13,6 +13,7 @@
     "@astro-community/astro-embed-youtube": "^0.5.2",
     "@astrojs/check": "^0.7.0",
     "@astrojs/tailwind": "^5.1.0",
+    "@fontsource/jersey-15": "^5.1.0",
     "@fontsource/space-grotesk": "^5.0.18",
     "@fontsource/space-mono": "^5.0.20",
     "astro": "^4.10.2",

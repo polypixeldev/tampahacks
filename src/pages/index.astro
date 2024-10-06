@@ -1,58 +1,97 @@
 ---
 import { Image } from "astro:assets";
+import "@fontsource/jersey-15";
+
+import TampaHacks1 from "../assets/photos/tampahacks1.jpg";
+import TampaHacks2 from "../assets/photos/tampahacks2.jpg";
+import TampaHacks3 from "../assets/photos/tampahacks3.jpg";
+import TampaHacks4 from "../assets/photos/tampahacks4.jpg";
+import TampaHacks5 from "../assets/photos/tampahacks5.jpg";
+import TampaHacks6 from "../assets/photos/tampahacks6.jpg";
 
 import Layout from "../layouts/Layout.astro";
-import TampaHacks2024 from "../assets/tampahacks-2024.jpeg";
+import Event from "../components/Event.astro";
+import CounterspellTampaLogo from "../assets/counterspell-tampa.png";
+import TampaHacksLogo from "../assets/tampahacks.png";
 ---
 
 <Layout>
-  <hr class="my-5 w-1/2 bg-white" />
   <div class="flex flex-col items-center justify-start gap-5">
-    <Image
-      src={TampaHacks2024}
-      alt="TampaHacks 2024"
-      class="w-4/5 rounded-md md:w-2/5"
-    />
-    <p class="w-4/5 text-center text-2xl text-white md:w-1/2">
-      TampaHacks was great! We had around 9 students from the Tampa Bay area and
-      beyond come and make some amazing games at <a
-        href="https://amroctampabay.com/"
-        class="underline">AMRoC Fab Lab</a
-      > on August 17th, 2024.
-    </p>
-    <p class="w-4/5 text-center text-2xl text-white md:w-1/2">
-      This event was organized by 3 high schoolers in Tampa: <a
-        href="https://github.com/Luke-Oldenburg/"
-        class="underline">Luke Oldenburg</a
-      >, <a href="https://sfernandez.dev" class="underline">Samuel Fernandez</a
-      >, and <a href="https://github.com/ultimatehecker" class="underline"
-        >ultimate_hecker</a
-      >. This was the first event of its kind in the Tampa Bay area, but
-      definitely not the last.
-    </p>
-    <p class="w-4/5 text-center text-2xl text-white md:w-1/2">
-      If you'd like to be notified about future events and announcements, please
-      sign up for our newsletter on our <a
-        href="https://lu.ma/tampahacks"
-        class="underline">Luma calendar</a
-      >.
-    </p>
-    <div
-      class="my-5 flex flex-col items-center justify-center gap-x-10 md:flex-row"
+    <p
+      class="my-5 flex flex-col items-center justify-start px-10 text-center text-2xl text-white"
     >
-      <a
-        class="block rounded-md border-2 border-sky-800 bg-sky-500 px-5 py-3 text-center text-2xl font-bold text-white"
-        href="https://lu.ma/tampahacks"
-      >
-        Luma Calendar
-      </a>
-      <a
-        class="block px-5 py-3 text-center text-2xl font-bold text-white underline"
-        href="/2024"
-      >
-        See pre-event website
-      </a>
-    </div>
+      Creating new opportunities for high school hackers in the Tampa Bay area!
+    </p>
+    <section class="flex w-4/5 flex-col items-center justify-start gap-5">
+      <h2 class="text-center font-mono text-5xl font-bold text-white">
+        events
+      </h2>
+      <Event
+        name="Counterspell Tampa"
+        desc="A beginner friendly game jam, happening in 200+ cities!"
+        color="counterspell-pink"
+        image={CounterspellTampaLogo}
+        link="https://counterspell.hackclub.com/tampa"
+      />
+      <Event
+        name="TampaHacks"
+        desc="TampaHacks' inaugural event in August 2024!"
+        color="tampahacks-blue"
+        image={TampaHacksLogo}
+        link="/2024"
+      />
+    </section>
+    <section class="py-20">
+      <p class="font-jersey text-center text-4xl text-white">
+        get notified when we have an announcement!
+      </p>
+      <form id="email-form" class="flex items-center justify-center pt-5">
+        <input
+          id="email-input"
+          name="email"
+          type="email"
+          class="border-tampahacks-blue bg-tampahacks-gray border-4 px-3 py-2 text-2xl text-white"
+          placeholder="ben@tampahacks.com"
+        />
+        <button
+          id="email-button"
+          type="submit"
+          class="bg-tampahacks-blue border-tampahacks-blue border-4 p-2 text-2xl font-bold text-white"
+          >sign up</button
+        >
+      </form>
+      <script>
+        document
+          .getElementById("email-form")
+          ?.addEventListener("submit", (event) => {
+            event.preventDefault();
+            fetch(
+              "https://services.leadconnectorhq.com/hooks/TFhJZDO3j6DhF9ljVKym/webhook-trigger/fbc82ba0-6909-46b1-8078-96306cb47bad",
+              {
+                method: "POST",
+                body: JSON.stringify({
+                  email: new FormData(
+                    document.getElementById("email-form") as HTMLFormElement,
+                  ).get("email"),
+                }),
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              },
+            );
+            (document.getElementById("email-input") as HTMLInputElement).value =
+              "";
+            document.getElementById("email-button")!.innerHTML = "signed up!";
+          });
+      </script>
+    </section>
+    <section class="m-2 w-4/5 columns-1 md:columns-2 lg:columns-3">
+      <Image class="py-2" src={TampaHacks2} alt="Photo from TampaHacks" />
+      <Image class="py-2" src={TampaHacks3} alt="Photo from TampaHacks" />
+      <Image class="py-2" src={TampaHacks4} alt="Photo from TampaHacks" />
+      <Image class="py-2" src={TampaHacks5} alt="Photo from TampaHacks" />
+      <Image class="py-2" src={TampaHacks6} alt="Photo from TampaHacks" />
+      <Image class="py-2" src={TampaHacks1} alt="Photo from TampaHacks" />
+    </section>
   </div>
-  <hr class="my-5 w-1/2 bg-white" />
 </Layout>

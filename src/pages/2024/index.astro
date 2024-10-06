@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+
+import Layout from "../../layouts/2024Layout.astro";
+import TampaHacks2024 from "../../assets/tampahacks-2024.jpeg";
+---
+
+<Layout>
+  <hr class="my-5 w-1/2 bg-white" />
+  <div class="flex flex-col items-center justify-start gap-5">
+    <Image
+      src={TampaHacks2024}
+      alt="TampaHacks 2024"
+      class="w-4/5 rounded-md md:w-2/5"
+    />
+    <p class="w-4/5 text-center text-2xl text-white md:w-1/2">
+      TampaHacks was great! We had around 9 students from the Tampa Bay area and
+      beyond come and make some amazing games at <a
+        href="https://amroctampabay.com/"
+        class="underline">AMRoC Fab Lab</a
+      > on August 17th, 2024.
+    </p>
+    <p class="w-4/5 text-center text-2xl text-white md:w-1/2">
+      This event was organized by 3 high schoolers in Tampa: <a
+        href="https://github.com/Luke-Oldenburg/"
+        class="underline">Luke Oldenburg</a
+      >, <a href="https://sfernandez.dev" class="underline">Samuel Fernandez</a
+      >, and <a href="https://github.com/ultimatehecker" class="underline"
+        >ultimate_hecker</a
+      >. This was the first event of its kind in the Tampa Bay area, but
+      definitely not the last.
+    </p>
+    <p class="w-4/5 text-center text-2xl text-white md:w-1/2">
+      If you'd like to be notified about future events and announcements, please
+      sign up for our newsletter on our <a
+        href="https://lu.ma/tampahacks"
+        class="underline">Luma calendar</a
+      >.
+    </p>
+    <div
+      class="my-5 flex flex-col items-center justify-center gap-x-10 md:flex-row"
+    >
+      <a
+        class="block rounded-md border-2 border-sky-800 bg-sky-500 px-5 py-3 text-center text-2xl font-bold text-white"
+        href="https://lu.ma/tampahacks"
+      >
+        Luma Calendar
+      </a>
+      <a
+        class="block px-5 py-3 text-center text-2xl font-bold text-white underline"
+        href="/2024"
+      >
+        See pre-event website
+      </a>
+    </div>
+  </div>
+  <hr class="my-5 w-1/2 bg-white" />
+</Layout>
