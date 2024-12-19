@@ -16,7 +16,7 @@
     "@fontsource/jersey-15": "^5.1.0",
     "@fontsource/space-grotesk": "^5.0.18",
     "@fontsource/space-mono": "^5.0.20",
-    "astro": "^4.10.2",
+    "astro": "^4.16.18",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.4.5"
   },
